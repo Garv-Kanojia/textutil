@@ -4,8 +4,11 @@ from django.shortcuts import render
 def home(request):
     return render(request , 'index.html')
 
+def get_data(request):
+    return request.POST.get('text','default')
+
 def remove(request):
-    line = request.POST.get('text','default')
+    line = get_data(request)
     punctuations = '''!()-[]}{;:'"\,<`+=>./?@#$%^&*_~'''
     line2 = line.split('\n')
     djtext = ''
@@ -19,7 +22,7 @@ def remove(request):
     return render(request , 'analyze2.html' , {'text' : dict})
 
 def upper(request):
-    line = request.POST.get('text','default')
+    line = get_data(request)
     line2 = line.split('\n')
     dict = []
     for i in line2:
@@ -27,12 +30,12 @@ def upper(request):
     return render(request , 'analyze2.html' , {'text' : dict})
 
 def count(request):
-    line = request.POST.get('text','default')
+    line = get_data(request)
     cnt = ['Number of words in your sentence are ' , len(line.split())]    
     return render(request , 'analyze2.html' , {'text' : cnt})
 
 def lower(request):
-    line = request.POST.get('text','default')
+    line = get_data(request)
     line2 = line.split('\n')
     dict = []
     for i in line2:
@@ -40,7 +43,7 @@ def lower(request):
     return render(request , 'analyze2.html' , {'text' : dict})
 
 def lined(request):
-    line = request.POST.get('text' , 'default')
+    line = get_data(request)
     djtext = ''
     for i in line:
         djtext += i
