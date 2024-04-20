@@ -9,7 +9,7 @@
 ![image](https://github.com/Garv-Kanojia/textutil/assets/129782195/70757852-8056-42e7-949c-de27c534f273)
 
 ![image](https://github.com/Garv-Kanojia/textutil/assets/129782195/e99dbc2b-e0a3-4376-8198-8ff425e7487f)
-On Windows create virtual environment by -> python -m venv Virtual_env
-install django in it by -> pip install django
+On Windows create virtual environment by -> python -m venv Virtual_env<br>
+install django in it by -> pip install django<br>
 
 on vs code run -> python manage.py runserver command
