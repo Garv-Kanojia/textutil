@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Utility Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+
+        .navbar {
+            background-color: #333;
+            color: #ffffff;
+            padding: 10px;
+        }
+
+        
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        p {
+            color: #350;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <h1>Here is Your Modified Text</h1>
+    {% for t in text %}
+    <p>{{t}}</p>
+    {% endfor %}
+</body>
+
+</html>
