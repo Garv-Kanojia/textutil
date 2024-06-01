@@ -12,4 +12,4 @@
 On Windows create virtual environment by -> python -m venv Virtual_env<br>
 install django in it by -> pip install django<br>
 
-on vs code run -> python manage.py runserver command
+on vs code terminal run -> python manage.py runserver command
